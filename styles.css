@@ -41,3 +41,23 @@ header{height:88px;padding:0 4vw;display:flex;align-items:center;justify-content
 .contact-form button:hover{background:#fff;color:var(--deep)}
 @media(max-width:1050px){.approach{grid-template-columns:48% 52%}.approach-copy h2{font-size:28px}}
 @media(max-width:780px){.approach{grid-template-columns:1fr}.approach-copy{padding:58px 7vw}.approach-copy h2{font-size:29px;line-height:1.65}.airrex-card .photo{height:auto;aspect-ratio:16/10}.company{padding:42px 7vw;grid-template-columns:1fr;gap:16px}.contact{padding:58px 7vw;grid-template-columns:1fr;gap:34px}.contact-form{grid-template-columns:1fr;gap:15px}.contact-form .full,.contact-form button{grid-column:1}.contact-form button{width:100%;margin:4px 0 0}}
+
+
+/* ===== COMPANY refinement ===== */
+.company-title h2{
+  font-family:Montserrat,"Noto Sans JP",sans-serif;
+  font-size:18px;
+  font-weight:400;
+  letter-spacing:.08em;
+  color:var(--deep);
+  margin:8px 0 0;
+}
+.company dt{
+  font-family:Montserrat,"Noto Sans JP",sans-serif;
+  font-size:9px;
+  letter-spacing:.12em;
+  color:#8b8b8b;
+}
+.company dd{
+  font-size:11px;
+}
