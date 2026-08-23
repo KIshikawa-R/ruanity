@@ -19,115 +19,25 @@ header{height:88px;padding:0 4vw;display:flex;align-items:center;justify-content
 .airrex-link a{color:#0b6f73;text-decoration:none;font-weight:600;letter-spacing:.04em}
 .airrex-link a:hover{text-decoration:underline}
 
-/* ===== RUANITY 2026-08-23 targeted fixes ===== */
-
-/* Keep AIRREX key visual fully visible rather than cropping it */
-.airrex-card .photo{
-  height:230px;
-  background:#fff;
-}
-.airrex-card .photo img{
-  width:100%;
-  height:100%;
-  object-fit:contain;
-  object-position:center;
-  background:#fff;
-}
-.airrex-lead{
-  margin:15px 0 6px;
-  color:var(--deep);
-  font-size:12px!important;
-  line-height:1.8!important;
-}
-
-/* Prevent the approach headline from breaking awkwardly on desktop */
-.approach-copy h2{
-  font-size:clamp(24px,2.35vw,36px);
-  line-height:1.7;
-  overflow-wrap:normal;
-  word-break:keep-all;
-}
-
-/* Contact form */
-.contact{
-  align-items:flex-start;
-}
-.contact-form{
-  width:min(620px,52vw);
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:14px;
-}
-.contact-form label{
-  display:flex;
-  flex-direction:column;
-  gap:7px;
-  font-size:10px;
-  letter-spacing:.04em;
-}
-.contact-form .full{
-  grid-column:1 / -1;
-}
-.contact-form input,
-.contact-form textarea{
-  width:100%;
-  border:1px solid rgba(255,255,255,.48);
-  background:rgba(255,255,255,.08);
-  color:#fff;
-  border-radius:0;
-  padding:13px 14px;
-  font:300 13px "Noto Sans JP",sans-serif;
-  outline:none;
-}
-.contact-form textarea{
-  min-height:130px;
-  resize:vertical;
-}
-.contact-form input::placeholder,
-.contact-form textarea::placeholder{
-  color:rgba(255,255,255,.62);
-}
-.contact-form input:focus,
-.contact-form textarea:focus{
-  border-color:#fff;
-  background:rgba(255,255,255,.12);
-}
-.contact-form button{
-  grid-column:1 / -1;
-  justify-self:end;
-  border:1px solid rgba(255,255,255,.7);
-  background:transparent;
-  color:#fff;
-  padding:15px 28px;
-  cursor:pointer;
-  font:500 11px Montserrat,"Noto Sans JP",sans-serif;
-  letter-spacing:.08em;
-}
-.contact-form button:hover{
-  background:#fff;
-  color:var(--deep);
-}
-
-@media(max-width:780px){
-  .airrex-card .photo{
-    height:auto;
-    aspect-ratio:16/10;
-  }
-  .approach-copy h2{
-    font-size:clamp(25px,8vw,34px);
-    line-height:1.65;
-    word-break:normal;
-  }
-  .contact-form{
-    width:100%;
-    grid-template-columns:1fr;
-  }
-  .contact-form .full,
-  .contact-form button{
-    grid-column:1;
-  }
-  .contact-form button{
-    width:100%;
-    justify-self:stretch;
-  }
-}
+/* ===== RUANITY layout fix v2 ===== */
+.approach{grid-template-columns:44% 56%}
+.approach-copy{padding:64px 4.2vw;min-width:0}
+.approach-copy h2{font-size:clamp(25px,2.05vw,34px);line-height:1.75;letter-spacing:.01em;word-break:normal;overflow-wrap:normal}
+.approach-copy>p:last-child{max-width:590px}
+.airrex-card .photo{height:230px;background:#fff}
+.airrex-card .photo img{width:100%;height:100%;object-fit:contain;object-position:center}
+.airrex-lead{margin:15px 0 6px;color:var(--deep);font-size:12px!important;line-height:1.8!important}
+.company{padding:38px 7vw;display:grid;grid-template-columns:160px 1fr;gap:4vw}
+.company h2{font-size:22px;margin:5px 0 0}.company dl div{padding:11px 0;font-size:11px}
+.contact{padding:65px 7vw;display:grid;grid-template-columns:minmax(260px,34%) minmax(0,1fr);gap:7vw;align-items:start}
+.contact h2{font-size:clamp(27px,2.5vw,38px);line-height:1.65}.contact-intro p:last-child{max-width:360px;line-height:1.9}
+.contact-form{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:18px 16px}
+.contact-form .field{display:flex;flex-direction:column;gap:8px;min-width:0;color:#fff;font-size:11px}
+.contact-form .full{grid-column:1/-1}
+.contact-form input,.contact-form textarea{display:block;width:100%;min-width:0;margin:0;border:1px solid rgba(255,255,255,.55);background:rgba(255,255,255,.09);color:#fff;padding:13px 14px;font:300 13px "Noto Sans JP",sans-serif;border-radius:2px;outline:none}
+.contact-form textarea{min-height:135px;resize:vertical}
+.contact-form input:focus,.contact-form textarea:focus{border-color:#fff;background:rgba(255,255,255,.14)}
+.contact-form button{grid-column:1/-1;width:190px;margin:2px 0 0 auto;padding:15px 18px;border:1px solid rgba(255,255,255,.75);background:transparent;color:#fff;font:500 11px Montserrat,"Noto Sans JP",sans-serif;letter-spacing:.08em;cursor:pointer}
+.contact-form button:hover{background:#fff;color:var(--deep)}
+@media(max-width:1050px){.approach{grid-template-columns:48% 52%}.approach-copy h2{font-size:28px}}
+@media(max-width:780px){.approach{grid-template-columns:1fr}.approach-copy{padding:58px 7vw}.approach-copy h2{font-size:29px;line-height:1.65}.airrex-card .photo{height:auto;aspect-ratio:16/10}.company{padding:42px 7vw;grid-template-columns:1fr;gap:16px}.contact{padding:58px 7vw;grid-template-columns:1fr;gap:34px}.contact-form{grid-template-columns:1fr;gap:15px}.contact-form .full,.contact-form button{grid-column:1}.contact-form button{width:100%;margin:4px 0 0}}

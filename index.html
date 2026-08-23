@@ -56,28 +56,19 @@
 </section>
 
 <section class="contact" id="contact">
-  <div>
+  <div class="contact-intro">
     <p class="label light">CONTACT</p>
     <h2>未来のことを、<br>一緒に考えませんか。</h2>
     <p>不動産・建築に関するご相談はお気軽にお問い合わせください。</p>
   </div>
-
   <form class="contact-form" action="https://formsubmit.co/k.ishikawa@ruanity.com" method="POST">
     <input type="hidden" name="_subject" value="RUANITY Webサイトからのお問い合わせ">
     <input type="hidden" name="_captcha" value="false">
     <input type="text" name="_honey" style="display:none">
-    <label>お名前
-      <input type="text" name="お名前" required autocomplete="name">
-    </label>
-    <label>メールアドレス
-      <input type="email" name="メールアドレス" required autocomplete="email">
-    </label>
-    <label class="full">会社名・団体名
-      <input type="text" name="会社名・団体名" autocomplete="organization">
-    </label>
-    <label class="full">お問い合わせ内容
-      <textarea name="お問い合わせ内容" required></textarea>
-    </label>
+    <label class="field"><span>お名前</span><input type="text" name="お名前" required autocomplete="name"></label>
+    <label class="field"><span>メールアドレス</span><input type="email" name="メールアドレス" required autocomplete="email"></label>
+    <label class="field full"><span>会社名・団体名</span><input type="text" name="会社名・団体名" autocomplete="organization"></label>
+    <label class="field full"><span>お問い合わせ内容</span><textarea name="お問い合わせ内容" required></textarea></label>
     <button type="submit">SEND MESSAGE →</button>
   </form>
 </section>
