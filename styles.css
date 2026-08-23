@@ -9,3 +9,12 @@ header{height:88px;padding:0 4vw;display:flex;align-items:center;justify-content
 .company{padding:80px 7vw;background:var(--cream);display:grid;grid-template-columns:35% 1fr;gap:8vw}.company dl{margin:0;border-top:1px solid var(--line)}.company dl div{display:grid;grid-template-columns:110px 1fr;border-bottom:1px solid var(--line);padding:19px 0;font-size:12px}.company dt{color:#77817e}.company dd{margin:0}
 .contact{padding:80px 7vw;background:linear-gradient(120deg,var(--deep),var(--teal));color:white;display:flex;justify-content:space-between;align-items:end;gap:40px}.light{color:#bce9e5}.contact p{font-size:11px}.contact>a{border:1px solid rgba(255,255,255,.65);padding:20px 24px;min-width:330px;display:flex;justify-content:space-between;font-size:12px}footer{height:100px;padding:0 6vw;background:#064f53;color:white;display:flex;align-items:center;justify-content:space-between}.footbrand{display:flex;align-items:center;gap:10px;font:500 11px Montserrat;letter-spacing:.2em}.footbrand img{width:44px;height:34px;object-fit:contain}footer p{font:400 9px Montserrat}
 @media(max-width:780px){header{height:70px}.brand{font-size:14px}.brand img{width:70px}nav{display:none;position:absolute;top:70px;left:0;right:0;padding:28px 7vw;background:#fff;flex-direction:column}.open nav{display:flex}.menu{display:block}.hero{height:590px}.hero-overlay{left:6vw;right:6vw;padding-left:22px}.hero h1{font-size:40px}.hero-sub{font-size:14px}.intro,.company,.airrex{grid-template-columns:1fr;gap:25px;padding:70px 7vw}.section-head{display:block}.section-head p{margin-top:18px}.business{padding:70px 7vw}.cards{grid-template-columns:1fr}.photo{height:210px}.approach{grid-template-columns:1fr}.approach-copy{padding:70px 7vw}.approach-image{min-height:300px}.contact{padding:70px 7vw;flex-direction:column;align-items:stretch}.contact>a{min-width:0}.airrex-image{margin-top:15px}}
+.hero-image img,.photo img,.airrex-image img,.approach-image img{
+  width:100%;height:100%;display:block;object-fit:cover;
+}
+.hero-image,.photo,.airrex-image,.approach-image{overflow:hidden;}
+
+/* Final top-page refinements */
+.airrex-link{margin-top:22px}
+.airrex-link a{color:#0b6f73;text-decoration:none;font-weight:600;letter-spacing:.04em}
+.airrex-link a:hover{text-decoration:underline}
