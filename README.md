@@ -17,3 +17,10 @@ AIRREXは、メーカーからWeb掲載用として利用可能な正式画像�
 ## GitHub Pages
 リポジトリ直下に index.html / styles.css / assets を置き、
 Settings > Pages > Deploy from a branch > main > /(root) を選択します。
+
+
+## Approved direction
+- キャッチコピーはヒーローのみ1回
+- 元のRUANITYロゴ画像は無加工。CSS表示サイズのみ拡大
+- スポットクーラー事業をサービスに復帰
+- フッターはダークティール
