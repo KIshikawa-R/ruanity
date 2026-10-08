@@ -4,70 +4,157 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>会社概要｜RUANITY株式会社</title>
 <meta name="description" content="RUANITY株式会社の代表メッセージと会社概要。住まいのことを、もっと身近に。">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+
 <style>
+/* ページ全体 */
 .company-page {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 160px 30px 110px;
+  padding: 150px 30px 110px;
 }
-.company-page h1 {
-  font-family: 'Noto Serif JP', serif;
-  font-size: clamp(28px, 4vw, 42px);
-  font-weight: 400;
-  margin: 15px 0 70px;
-}
+
 .company-page .section-label {
   font-family: Montserrat, sans-serif;
   font-size: 12px;
   letter-spacing: .18em;
+  color: #087b7e;
 }
-.message-section {
-  margin-bottom: 100px;
-}
-.message-section h2 {
+
+/* ページタイトル */
+.company-page h1 {
   font-family: 'Noto Serif JP', serif;
-  font-size: clamp(22px, 3vw, 30px);
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 400;
+  margin: 15px 0 22px;
+}
+
+.company-title-line {
+  width: 55px;
+  height: 2px;
+  background: #087b7e;
+  margin-bottom: 85px;
+}
+
+/* 代表メッセージ */
+.message-section {
+  margin-bottom: 110px;
+}
+
+.message-layout {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 55px;
+  align-items: start;
+}
+
+.message-text h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(22px, 2.7vw, 30px);
   font-weight: 400;
   line-height: 1.8;
-  margin: 25px 0 35px;
+  margin: 20px 0 35px;
 }
-.message-section p {
+
+.message-text p:not(.section-label) {
   line-height: 2.3;
   margin-bottom: 22px;
 }
+
 .message-sign {
   text-align: right;
-  margin-top: 45px;
+  margin-top: 40px;
+  line-height: 2;
 }
+
+/* 住宅写真 */
+.message-photo {
+  margin: 48px 0 0;
+}
+
+.message-photo img {
+  display: block;
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 3px;
+}
+
+.message-photo figcaption {
+  margin-top: 10px;
+  font-size: 11px;
+  color: #888;
+  text-align: right;
+}
+
+/* 会社概要 */
 .profile-section {
-  border-top: 1px solid #ddd;
-  padding-top: 60px;
+  background: #faf8f3;
+  padding: 55px 60px 65px;
 }
+
 .profile-section h2 {
   font-family: Montserrat, sans-serif;
   font-size: 15px;
   letter-spacing: .12em;
   font-weight: 500;
+  color: #087b7e;
   margin-bottom: 35px;
 }
+
 .profile-row {
   display: grid;
-  grid-template-columns: 180px 1fr;
+  grid-template-columns: 160px 1fr;
   gap: 20px;
   padding: 22px 0;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #dce5e2;
   line-height: 1.8;
 }
-@media(max-width:600px) {
+
+.profile-row:last-child {
+  border-bottom: none;
+}
+
+/* スマートフォン */
+@media (max-width: 780px) {
   .company-page {
     padding: 120px 24px 70px;
   }
+
+  .company-title-line {
+    margin-bottom: 60px;
+  }
+
+  .message-layout {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .message-photo {
+    margin-top: 15px;
+  }
+
+  .message-photo img {
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .message-section {
+    margin-bottom: 75px;
+  }
+
+  .profile-section {
+    padding: 35px 25px 45px;
+  }
+
   .profile-row {
     grid-template-columns: 100px 1fr;
     gap: 15px;
@@ -75,42 +162,60 @@
 }
 </style>
 </head>
+
 <body>
 
 <header>
   <a class="brand" href="index.html#top">
-    <img src="assets/ruanity-logo.png" alt="RUANITY株式会社">
+    <img src="assets/ruanity-logo.png?v=20261008" alt="RUANITY">
   </a>
+
   <button class="menu" aria-label="メニュー">MENU</button>
-<nav>
-  <a href="company.html">ABOUT / COMPANY</a>
-  <a href="index.html#business">OUR BUSINESS</a>
-  <a href="index.html#contact">CONTACT</a>
-</nav>
+
+  <nav>
+    <a href="company.html">ABOUT / COMPANY</a>
+    <a href="index.html#business">OUR BUSINESS</a>
+    <a href="index.html#contact">CONTACT</a>
+  </nav>
 </header>
 
 <main class="company-page">
 
   <p class="section-label">COMPANY</p>
   <h1>会社概要</h1>
+  <div class="company-title-line"></div>
 
   <section class="message-section">
-    <p class="section-label">MESSAGE</p>
-    <h2>住まいのことを、もっと身近に。</h2>
+    <div class="message-layout">
 
-    <p>住まいは、日々の暮らしを支え、人生のさまざまな場面に寄り添う大切な場所です。</p>
+      <div class="message-text">
+        <p class="section-label">MESSAGE</p>
+        <h2>住まいのことを、もっと身近に。</h2>
 
-    <p>私たちRUANITYは、不動産の売買や賃貸だけでなく、住まいづくりやリフォーム、土地の活用など、住まいに関するさまざまなお悩みを気軽に相談できる存在でありたいと考えています。</p>
+        <p>住まいは、日々の暮らしを支え、人生のさまざまな場面に寄り添う大切な場所です。</p>
 
-    <p>「こんなことを聞いてもいいのかな」と思うような小さな疑問でも、どうぞお気軽にご相談ください。</p>
+        <p>私たちRUANITYは、不動産の売買や賃貸だけでなく、住まいづくりやリフォーム、土地の活用など、住まいに関するさまざまなお悩みを気軽に相談できる存在でありたいと考えています。</p>
 
-    <p>建築と不動産、両方の視点を大切にしながら、お客様一人ひとりの想いに寄り添い、より良い選択をともに考えてまいります。</p>
+        <p>「こんなことを聞いてもいいのかな」と思うような小さな疑問でも、どうぞお気軽にご相談ください。</p>
 
-    <p>地域の皆さまとのご縁を大切に、末永く信頼いただける身近なパートナーを目指してまいります。</p>
+        <p>建築と不動産、両方の視点を大切にしながら、お客様一人ひとりの想いに寄り添い、より良い選択をともに考えてまいります。</p>
 
-    <div class="message-sign">
-      RUANITY株式会社<br>
-      代表取締役　石川 快
+        <p>地域の皆さまとのご縁を大切に、末永く信頼いただける身近なパートナーを目指してまいります。</p>
+
+        <div class="message-sign">
+          RUANITY株式会社<br>
+          代表取締役　石川 快
+        </div>
+      </div>
+
+      <figure class="message-photo">
+        <img
+          src="assets/company-living.png"
+          alt="自然光が差し込む、木の温もりを感じる住まいのイメージ"
+          loading="lazy">
+        <figcaption>※画像はイメージです</figcaption>
+      </figure>
+
     </div>
   </section>
 
@@ -121,41 +226,45 @@
       <div>会社名</div>
       <div>RUANITY株式会社</div>
     </div>
+
     <div class="profile-row">
       <div>代表者</div>
       <div>代表取締役 石川 快</div>
     </div>
+
     <div class="profile-row">
       <div>所在地</div>
       <div>千葉県松戸市</div>
     </div>
+
     <div class="profile-row">
       <div>事業内容</div>
       <div>不動産・建築総合コンサルティング／関連事業</div>
     </div>
+
   </section>
 
 </main>
 
 <footer>
   <div class="footbrand">
-    <a href="index.html#top">
-      <img src="assets/ruanity-logo.png" alt="RUANITY株式会社">
-    </a>
+    <img src="assets/ruanity-logo.png?v=20261008" alt="RUANITY">
   </div>
   <p>© 2026 RUANITY Inc.</p>
 </footer>
 
 <script>
 const btn = document.querySelector('.menu');
-btn.addEventListener('click', () =>
-  document.body.classList.toggle('open')
-);
-document.querySelectorAll('nav a').forEach(a =>
-  a.addEventListener('click', () =>
-    document.body.classList.remove('open')
-  )
-);
+
+btn.addEventListener('click', () => {
+  document.body.classList.toggle('open');
+});
+
+document.querySelectorAll('nav a').forEach(a => {
+  a.addEventListener('click', () => {
+    document.body.classList.remove('open');
+  });
+});
 </script>
 
 </body>
