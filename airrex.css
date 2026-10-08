@@ -11,16 +11,18 @@
 @media(max-width:900px){.features{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:620px){.feature-title{text-align:left}.feature-title p{font-size:13px}.features{grid-template-columns:1fr;gap:34px}.features article{padding-bottom:28px}.feature-image{margin-bottom:18px}.feature-image img{aspect-ratio:4/3}.features h3{font-size:22px}.feature-close{margin-top:52px;padding:38px 20px;text-align:left}.feature-close p{line-height:1.8}.feature-close strong br{display:none}}
 
-/* AIRREX ヘッダーロゴ調整 */
+/* AIRREX ヘッダーのロゴをトップページと統一 */
 .ar-head .brand {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .ar-head .brand img {
   display: block;
   width: 175px;
   height: 72px;
+  max-width: none;
   object-fit: contain;
 }
 
@@ -28,18 +30,5 @@
   .ar-head .brand img {
     width: 135px;
     height: 58px;
-  }
-}
-/* POINT 01 見出しの改行調整 */
-@media (min-width: 901px) {
-  .comparison-intro {
-    grid-template-columns: auto minmax(0, 1.5fr) minmax(0, 0.7fr);
-    gap: 24px;
-  }
-
-  .comparison-intro h3 {
-    font-size: clamp(25px, 2.1vw, 34px);
-    line-height: 1.5;
-    word-break: keep-all;
   }
 }
