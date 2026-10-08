@@ -61,3 +61,32 @@ header{height:88px;padding:0 4vw;display:flex;align-items:center;justify-content
 .company dd{
   font-size:11px;
 }
+
+/* ===== RUANITY official logo ===== */
+
+/* ヘッダー */
+.brand img {
+  width: 175px;
+  height: 72px;
+  object-fit: contain;
+}
+
+/* フッター */
+.footbrand img {
+  width: 145px;
+  height: 75px;
+  object-fit: contain;
+}
+
+/* スマートフォン */
+@media (max-width: 780px) {
+  .brand img {
+    width: 135px;
+    height: 58px;
+  }
+
+  .footbrand img {
+    width: 120px;
+    height: 65px;
+  }
+}
