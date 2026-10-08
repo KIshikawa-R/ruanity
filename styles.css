@@ -28,10 +28,10 @@ nav a:hover{color:var(--teal)}
 
 /* Philosophy / formerly About */
 .intro#about{display:block;padding:105px max(30px,calc((100% - 1100px)/2));background:var(--cream)}
-.intro#about .intro-inner{max-width:850px;margin:0 auto}
+.intro#about .intro-inner{width:100%;max-width:1100px;margin:0 auto}
 .intro#about .label,.approach#approach .label{display:block;margin:0 0 35px}
 .intro#about .label::after,.approach#approach .label::after{content:'';display:block;width:44px;height:2px;background:var(--teal);margin-top:17px}
-.intro#about h2{font-size:clamp(28px,3.2vw,42px);line-height:1.8;letter-spacing:.035em;margin:0 0 30px}
+.intro#about h2{font-size:clamp(27px,2.8vw,40px);line-height:1.75;letter-spacing:.02em;margin:0 0 30px;word-break:keep-all;overflow-wrap:normal}
 .intro#about .intro-description{font-size:15px;line-height:2.2;margin:0;max-width:760px}
 
 /* Business cards */
@@ -150,4 +150,24 @@ footer p{font:400 9px Montserrat,sans-serif}
   .contact-form .full,.contact-form button{grid-column:1}
   .contact-form button{width:100%;margin:4px 0 0}
   .footbrand img{width:120px;height:65px}
+}
+/* PHILOSOPHYの文章を読みやすく */
+.intro#about .intro-description {
+  max-width: 900px;
+  font-size: 14px;
+  line-height: 2.1;
+}
+
+/* BUSINESS見出しを控えめに */
+.business#business .section-head h2 {
+  font-size: clamp(26px, 2.5vw, 36px);
+}
+
+/* スマートフォン */
+@media (max-width: 780px) {
+  .intro#about h2 {
+    font-size: clamp(23px, 5vw, 30px);
+    word-break: normal;
+    overflow-wrap: anywhere;
+  }
 }
