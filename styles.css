@@ -191,3 +191,18 @@ footer p{font:400 9px Montserrat,sans-serif}
   .soft-reveal-ready{opacity:1;filter:none}
   .soft-reveal-ready.soft-reveal-visible{animation:none}
 }
+
+/* Improve hero text contrast while preserving the original photograph */
+.hero-image::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(90deg,rgba(0,0,0,.36) 0%,rgba(0,0,0,.29) 34%,rgba(0,0,0,.10) 65%,rgba(0,0,0,0) 100%);
+}
+.hero-overlay{text-shadow:0 1px 4px rgba(0,0,0,.28)}
+@media(max-width:780px){
+  .hero-image::after{
+    background:linear-gradient(90deg,rgba(0,0,0,.39) 0%,rgba(0,0,0,.31) 60%,rgba(0,0,0,.12) 100%);
+  }
+}
