@@ -171,3 +171,23 @@ footer p{font:400 9px Montserrat,sans-serif}
     overflow-wrap: anywhere;
   }
 }
+
+/* Subtle 1.2s blur-to-sharp reveal on selected headings only */
+.soft-reveal-ready{opacity:.12;filter:blur(10px)}
+.soft-reveal-ready.soft-reveal-visible{animation:soft-reveal-focus 1.2s ease-out both}
+@keyframes soft-reveal-focus{
+  0%{opacity:.12;filter:blur(10px)}
+  15%{opacity:.55;filter:blur(7px)}
+  55%{opacity:.95;filter:blur(3px)}
+  100%{opacity:1;filter:blur(0)}
+}
+/* Match OUR BUSINESS to the other English section labels */
+.business#business .section-head h2{
+  font:500 12px Montserrat,sans-serif;
+  letter-spacing:.18em;
+  line-height:normal;
+}
+@media(prefers-reduced-motion:reduce){
+  .soft-reveal-ready{opacity:1;filter:none}
+  .soft-reveal-ready.soft-reveal-visible{animation:none}
+}
