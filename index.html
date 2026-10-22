@@ -27,7 +27,7 @@
 <section class="hero">
   <div class="hero-image"><img src="assets/hero-house.jpg" alt="モダンな住宅外観"></div>
   <div class="hero-overlay">
-    <h1>絆がつながり、<br>未来へつづく。</h1>
+    <h1 class="soft-reveal">絆がつながり、<br>未来へつづく。</h1>
     <p class="hero-sub">建築に強い、不動産総合コンサルティング。</p>
     <p class="hero-copy">人と人、想いと未来をつなぎ、<br>最適な不動産と建築のかたちをともに創ります。</p>
   </div>
@@ -35,7 +35,7 @@
 
 <section class="intro" id="about">
   <div class="intro-inner">
-    <p class="label">OUR PHILOSOPHY</p>
+    <p class="label soft-reveal">OUR PHILOSOPHY</p>
     <h2>建築の知識を強みに、<br>不動産のその先まで考える。</h2>
     <p class="intro-description">
       不動産の取引だけではなく、建築・設計・資産活用・事業計画まで。<br class="desktop-only">
@@ -46,7 +46,7 @@
 
 <section class="business" id="business">
   <div class="section-head">
-  <h2>OUR BUSINESS</h2>
+  <h2 class="soft-reveal">OUR BUSINESS</h2>
   <p>
     不動産と建築、双方の専門性を活かし、<br>
     お客様の未来につながる最適なご提案を。
@@ -76,7 +76,7 @@
 
 <section class="approach" id="approach">
   <div class="approach-copy">
-    <p class="label">OUR APPROACH</p>
+    <p class="label soft-reveal">OUR APPROACH</p>
 
     <h2>
       一つひとつのご縁を大切に、<br>
@@ -98,7 +98,7 @@
 
 <section class="contact" id="contact">
   <div class="contact-intro">
-    <p class="label light">CONTACT</p>
+    <p class="label light soft-reveal">CONTACT</p>
     <h2>未来のことを、<br>一緒に考えませんか。</h2>
     <p>不動産・建築に関するご相談はお気軽にお問い合わせください。</p>
   </div>
@@ -127,6 +127,24 @@
 const btn=document.querySelector('.menu');
 btn.addEventListener('click',()=>document.body.classList.toggle('open'));
 document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>document.body.classList.remove('open')));
+</script>
+<script>
+(function(){
+  const targets = document.querySelectorAll('.soft-reveal');
+  if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('soft-reveal-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  targets.forEach((target) => {
+    target.classList.add('soft-reveal-ready');
+    observer.observe(target);
+  });
+})();
 </script>
 </body>
 </html>
