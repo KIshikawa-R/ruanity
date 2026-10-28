@@ -109,7 +109,8 @@
     <label class="field"><span>お名前</span><input type="text" name="お名前" required autocomplete="name"></label>
     <label class="field"><span>メールアドレス</span><input type="email" name="メールアドレス" required autocomplete="email"></label>
     <label class="field full"><span>会社名・団体名</span><input type="text" name="会社名・団体名" autocomplete="organization"></label>
-    <label class="field full"><span>お問い合わせ内容</span><textarea name="お問い合わせ内容" required></textarea></label>
+    <label class="field full"><span>お問い合わせ内容</span><textarea name="お問い合わせ内容" required aria-describedby="contact-privacy-note"></textarea></label>
+    <p class="full" id="contact-privacy-note" style="margin:0;font-size:12px;line-height:1.8;">機密情報や個人情報を含む資料は、このフォームでは送信しないでください。</p>
     <button type="submit">SEND MESSAGE →</button>
   </form>
 </section>
