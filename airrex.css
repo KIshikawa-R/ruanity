@@ -32,3 +32,49 @@
     height: 58px;
   }
 }
+
+/* Navigation repair and responsive typography | 2026-10-31 */
+.ar-menu{display:none;border:0;background:transparent;color:#173c5d;font:600 12px Montserrat,sans-serif;letter-spacing:.13em;padding:12px;cursor:pointer}
+.ar-head nav{display:flex;align-items:center;gap:clamp(12px,2vw,30px);font-size:13px;font-weight:600}
+.ar-head nav>a{white-space:nowrap}
+@media(max-width:900px){
+ .ar-head{height:70px;padding:0 6vw}
+ .ar-menu{display:block}
+ .ar-head nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;box-shadow:0 12px 22px rgba(0,0,0,.12);padding:18px 6vw 24px;flex-direction:column;align-items:stretch;gap:0;z-index:30}
+ .ar-head nav.is-open{display:flex}
+ .ar-head nav>a,.ar-head nav>a:not(.navcta){display:block;padding:15px 8px;border-bottom:1px solid #e9eef2;font-size:14px;line-height:1.6;white-space:normal}
+ .ar-head nav>.navcta{margin-top:12px;padding:14px 16px;border:0;text-align:center;color:#fff!important}
+}
+@media(max-width:620px){
+ .ar-head{height:70px;padding:0 5vw}
+ .ar-head .brand img{width:125px;height:56px}
+ .hero-copy{padding:32px 22px 60px}
+ .hero h1{font-size:clamp(25px,7vw,31px);line-height:1.5;letter-spacing:-.035em;overflow-wrap:anywhere;margin:16px 0}
+ .hero h1 span{display:inline;background:linear-gradient(90deg,#fff,#a9e1ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+ .eyebrow{font-size:10px;letter-spacing:.12em;line-height:1.8}
+ .hero-message{font-size:16px;line-height:1.65}
+ .lead{font-size:14px;line-height:1.9}
+ .intro h2,.title h2{font-size:clamp(23px,6vw,27px);line-height:1.55;overflow-wrap:anywhere}
+ .intro p,.performance-head>p:last-child,.comparison-intro p{font-size:14px;line-height:1.9}
+ .performance-head h2{font-size:clamp(31px,8vw,37px);line-height:1.35}
+ .comparison-intro h3{font-size:clamp(22px,6vw,26px);line-height:1.5}
+ .compare-card>h3{font-size:21px;line-height:1.5}
+ .field-proof h3{font-size:clamp(27px,7vw,33px)}
+ .trust-copy h3{font-size:24px}
+ .cta h2{font-size:clamp(26px,7vw,32px);line-height:1.5}
+ .scenes h3,.features h3{font-size:19px;line-height:1.55}
+ .scenes p,.features p,.products p{font-size:14px;line-height:1.85}
+ .feature-close strong{font-size:clamp(20px,5.5vw,25px)}
+ .serieshead b{font-size:17px}
+ .products h3{font-size:20px;overflow-wrap:anywhere}
+ .metric-copy strong{font-size:50px}
+ .temperature-max strong{font-size:36px}
+ .wrap,.lineup{padding:68px 20px}
+ .performance{padding:72px 20px}
+ .intro{padding:68px 22px}
+ .title{margin-bottom:38px}
+ .comparison-intro{margin-bottom:25px}
+ .field-proof{margin-top:48px!important}
+ .feature-close{margin-top:42px}
+ .cta{padding:62px 22px}
+}
