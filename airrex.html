@@ -8,13 +8,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="./airrex.css?v=13">
+ <link rel="stylesheet" href="./airrex.css?v=14">
 </head>
 <body class="airrex">
   <header class="ar-head">
 <a class="brand" href="./index.html#top">
   <img src="./assets/ruanity-logo.png" alt="RUANITY株式会社">
 </a>
+    <button class="ar-menu" type="button" aria-label="メニューを開く" aria-controls="airrex-nav" aria-expanded="false">MENU</button>
+    <nav id="airrex-nav" aria-label="AIRREXページメニュー">
       <a href="#performance">性能の違い</a>
       <a href="#scenes">活用シーン</a>
       <a href="#lineup">ラインナップ</a>
@@ -179,5 +181,11 @@
   </a>
   <small>© 2026 RUANITY Inc.</small>
 </footer>
+<script>
+const arMenu=document.querySelector(".ar-menu");
+const arNav=document.querySelector("#airrex-nav");
+arMenu.addEventListener("click",()=>{const open=arNav.classList.toggle("is-open");arMenu.setAttribute("aria-expanded",String(open));arMenu.setAttribute("aria-label",open?"メニューを閉じる":"メニューを開く");});
+arNav.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>{arNav.classList.remove("is-open");arMenu.setAttribute("aria-expanded","false");arMenu.setAttribute("aria-label","メニューを開く");}));
+</script>
 </body>
 </html>
